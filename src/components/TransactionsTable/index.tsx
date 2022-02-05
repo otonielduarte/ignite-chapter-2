@@ -20,9 +20,9 @@ export function TransactionsTable() {
         </thead>
         <tbody>
           {
-            transactions.map((transaction) => {
+            transactions.map((transaction, index) => {
               return (
-                <tr key={`transaction-tr-${transaction.id}`}>
+                <tr key={`transaction-tr-${index}`}>
                   <td>{transaction.title}</td>
                   <td className={transaction.type}>{parseNumberToCurrency(transaction.amount)}</td>
                   <td>{transaction.category}</td>
